@@ -1,9 +1,7 @@
-import jdk.internal.dynalink.linker.LinkerServices;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class InsertionSort {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size Array: ");
@@ -13,10 +11,11 @@ public class Main {
             System.out.println("Enter element: ");
             arr[i] = sc.nextInt();
         }
-        insertionSort(arr);
+        InsertionSort insertionSort = new InsertionSort();
+        insertionSort.insertionSort(arr);
         System.out.println(Arrays.toString(arr));
     }
-    public static void insertionSort(int[] arr){
+    public void insertionSort(int[] arr){
         for (int i = 1; i < arr.length; i++) {
             int currentElement = arr[i];
             int k;
